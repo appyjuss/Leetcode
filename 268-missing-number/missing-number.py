@@ -24,8 +24,9 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-
+        a = []
         for i in range(len(nums) + 1):
-            if i not in nums:
-                return i
-            
+            a.append(i)
+
+        return list(set(a).difference(set(nums)))[0]
+        
